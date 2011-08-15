@@ -1,0 +1,7 @@
+{
+    "shell-version": ["3.0"],
+    "uuid": "enhancedAltTab@chrisss404.gmail.com",
+    "name": "EnhancedAltTab",
+    "url": "https://github.com/phttps://github.com/chrisss404/gnome-shell-enhanced-alt-tab",
+    "description": "A gnome-shell extension that adds additional shortcut keys to the AltTab-Switcher: Alt+W closes the highlighted application; Alt+[1-10] moves the highlighted application to the choosen workspace."
+}

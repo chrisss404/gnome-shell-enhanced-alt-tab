@@ -6,7 +6,7 @@ const Shell = imports.gi.Shell;
 
 const Main = imports.ui.main;
 
-function main(metadata) {
+function init(extensionMeta) {
     Main._isAltTabPopupVisible = function() {
         for(let i = 0; i < Main.uiGroup.get_n_children(); i++) {
             if(Main.uiGroup.get_nth_child(i).get_name() == "altTabPopup") {
@@ -241,7 +241,9 @@ function main(metadata) {
             this._select(this._currentApp);
         }
     };
+}
 
+function enable() {
     AltTab.AltTabPopup.prototype._keyPressEventFunction = AltTab.AltTabPopup.prototype._keyPressEvent;
     AltTab.AltTabPopup.prototype._keyPressEvent = function(actor, event) {
         if(!global.display) {
@@ -275,4 +277,8 @@ function main(metadata) {
 
         this._keyPressEventFunction(actor, event);
     };
+}
+
+function disable() {
+    AltTab.AltTabPopup.prototype._keyPressEvent = AltTab.AltTabPopup.prototype._keyPressEventFunction;
 }

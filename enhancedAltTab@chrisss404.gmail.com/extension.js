@@ -100,6 +100,7 @@ function init(extensionMeta) {
             this._currentApp = this._appIcons.length-1;
             this._appSwitcher._highlighted = -1;
             this._appSwitcher._curApp = this._appIcons.length-1;
+            this._appSwitcher._highlighted = this._currentApp;
         } else if(this._currentWindow >= this._appIcons[this._currentApp]['cachedWindows'].length) {
             this._currentWindow = this._appIcons[this._currentApp]['cachedWindows'].length-1;
             this._thumbnails._highlighted = -1;
@@ -107,7 +108,7 @@ function init(extensionMeta) {
 
         //selecet next app
         if(this._appIcons[this._currentApp]['cachedWindows'].length <= 1) {
-            this._select(this._currentApp, null, true);
+            this._appSwitcher._items[this._currentApp].add_style_pseudo_class('selected');
             this._currentWindow = -1;
         } else {
             this._select(this._currentApp, this._currentWindow);

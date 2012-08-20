@@ -1,5 +1,5 @@
 {
-    "shell-version": ["3.2"],
+    "shell-version": ["3.2", "3.4"],
     "uuid": "enhancedAltTab@chrisss404.gmail.com",
     "name": "EnhancedAltTab",
     "url": "https://github.com/chrisss404/gnome-shell-enhanced-alt-tab",
